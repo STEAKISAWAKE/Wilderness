@@ -10,6 +10,6 @@ commands:
       description: Teleport to the random of wild zone!
       permission: wild.command
          
-permission:
+permissions:
     wild.command:
      default: true
