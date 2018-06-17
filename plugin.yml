@@ -1,5 +1,5 @@
 name: Wilderness
-version: W-0.1
+version: 1.5.0
 api: [3.0.0]
 main: Wilderness\Main
 website: http://github.com/ImpladeDeveloped/Wilderness
