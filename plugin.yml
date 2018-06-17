@@ -7,8 +7,8 @@ author: Zadezter
 
 commands:
     wild:
-         description: Teleport to the random of wild zone!
-         permission: wild.command
+      description: Teleport to the random of wild zone!
+      permission: wild.command
          
 permission:
     wild.command:
