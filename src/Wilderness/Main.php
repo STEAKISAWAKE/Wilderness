@@ -52,34 +52,34 @@ class Main extends PluginBase {
 					   $player->getLevel()->addSound(new BlazeShootSound($this, $player));
 					    // PARTICLES \\
 					   $wild1 = $this->plugin->getServer()->getDefaultLevel();
-		               $r = rand(1,300);
-		               $g = rand(1,300);
-		               $b = rand(1,300);
-		               $center = new Vector3($x, $y, $z);
-		               $radius = 0.5;
-		                    $wildp1 = new SmokeParticle($center, $r, $g, $b, 1);
-		                    for($yaw = 0, $y = $center->y; $y < $center->y + 4; $yaw += (M_PI * 2) / 20, $y += 1 / 20) {
-			                $x = -sin($yaw) + $center->x;
-			                $z = cos($yaw) + $center->z;
-			                $wildp1->setComponents($x, $y, $z);
-			                $wild->addParticle($wildp1);
-			              }
-		                    $wildp2 = new PortalParticle($center, $r, $g, $b, 1);
-		                    for($yaw = 0, $y = $center->y; $y < $center->y + 4; $yaw += (M_PI * 2) / 20, $y += 1 / 20) {
-			                $x = -sin($yaw) + $center->x;
-			                $z = cos($yaw) + $center->z;
-			                $wildp2->setComponents($x, $y, $z);
-			                $wild->addParticle($wildp2);
-			              }
-			          }else{
+		                           $r = rand(1,300);
+		                           $g = rand(1,300);
+		                           $b = rand(1,300);
+		                           $center = new Vector3($x, $y, $z);
+		                           $radius = 0.5;
+		                           $wildp1 = new SmokeParticle($center, $r, $g, $b, 1);
+		                           for($yaw = 0, $y = $center->y; $y < $center->y + 4; $yaw += (M_PI * 2) / 20, $y += 1 / 20) {
+			                     $x = -sin($yaw) + $center->x;
+			                     $z = cos($yaw) + $center->z;
+			                     $wildp1->setComponents($x, $y, $z);
+			                     $wild->addParticle($wildp1);
+			                    }
+		                          $wildp2 = new PortalParticle($center, $r, $g, $b, 1);
+		                          for($yaw = 0, $y = $center->y; $y < $center->y + 4; $yaw += (M_PI * 2) / 20, $y += 1 / 20) {
+			                    $x = -sin($yaw) + $center->x;
+			                    $z = cos($yaw) + $center->z;
+			                    $wildp2->setComponents($x, $y, $z);
+			                    $wild->addParticle($wildp2);
+			                   }
+			                 }else{
 					     $player->sendMessage("");
 					     return false;
-				       }
-				   }else{
+				          }
+				        }else{
 					  $player->sendMessage($this->wildprefix . "§cPlease use Implactor command in-game server!");
 					  return false;
-			        }
-                     return true;
-		       }
-		   }
-	  }
+			               }
+                                      return true;
+		                  }
+		            }
+                      }
