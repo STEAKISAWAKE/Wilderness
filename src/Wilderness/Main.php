@@ -42,16 +42,16 @@ class Main extends PluginBase {
 		if(strtolower($cmd->getName()) == "wild") {
 			 if($player instanceof Player){
 				 if($player->hasPermission("wild.command")){
-					 $x = mt_rand(1, 999);
-					 $z = mt_rand(1, 999);
-					   $y = $player->getLevel()->getHighestBlockAt($x, $z) + 1;
+                                       $x = mt_rand(1, 999);
+                                       $z = mt_rand(1, 999);
+                                       $y = $player->getLevel()->getHighestBlockAt($x, $z) + 1;
 					   $player->teleport(new Position($x, $y, $z, $player->getLevel()));
 					   $player->addTitle("§7§l[§d§rWILDERNESS§7§l]§r", "§fTeleporting...");
 					   $player->sendMessage("§7-------\n §cTeleporting to random spot\n §cof §dwilderness§c... §7\n-------");
 					   $player->getLevel()->addSound(new FizzSound($this, $player));
 					   $player->getLevel()->addSound(new BlazeShootSound($this, $player));
 					    // PARTICLES \\
-					   $wild1 = $this->plugin->getServer()->getDefaultLevel();
+					   $wild = $this->plugin->getServer()->getDefaultLevel();
 		                           $r = rand(1,300);
 		                           $g = rand(1,300);
 		                           $b = rand(1,300);
