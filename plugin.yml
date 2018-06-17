@@ -1,6 +1,6 @@
 name: Wilderness
 version: 1.5.0
-api: [3.0.0]
+api: [3.0.0-ALPHA12]
 main: Wilderness\Main
 website: http://github.com/ImpladeDeveloped/Wilderness
 author: Zadezter
