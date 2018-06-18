@@ -25,6 +25,7 @@ use pocketmine\level\particle\{
 use pocketmine\level\sound\{
 	BlazeShootSound, FizzSound
 };
+use pocketmine\math\Vector3;
 
 class Main extends PluginBase {
 	
@@ -51,10 +52,13 @@ class Main extends PluginBase {
 					   $player->getLevel()->addSound(new FizzSound($this, $player));
 					   $player->getLevel()->addSound(new BlazeShootSound($this, $player));
 					    // PARTICLES \\
-					   $wild = $this->plugin->getServer()->getDefaultLevel();
+					   $wild = $this->getServer()->getDefaultLevel();
 		                           $r = rand(1,300);
 		                           $g = rand(1,300);
 		                           $b = rand(1,300);
+					   $x = $player->getX();
+					   $y = $player->getY();
+					   $z = $player->getZ();
 		                           $center = new Vector3($x, $y, $z);
 		                           $radius = 0.5;
 		                           $wildp1 = new SmokeParticle($center, $r, $g, $b, 1);
