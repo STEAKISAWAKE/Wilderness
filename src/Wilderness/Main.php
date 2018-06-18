@@ -32,6 +32,9 @@ class Main extends PluginBase {
 	public $wildprefix = "§l§7[§r§dWilderness§7§l]";
 	
 	public function onEnable(): void{
+		if($this->getServer()->getName() !== "PocketMine-MP"){
+		$this->getLogger()->critical("Sorry, this plugin is only supported to PocketMine-MP server software!");
+               }
 		$this->getLogger()->info($this->wildprefix . "This plugin has now successfully enabled!");
 	}
 	
