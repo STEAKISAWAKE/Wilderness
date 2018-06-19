@@ -1,13 +1,13 @@
 name: Wilderness
 version: 1.5.0
-api: [3.0.0-ALPHA12]
+api: [3.0.0-ALPHA12, 3.0.0]
 main: Wilderness\Main
 website: http://github.com/ImpladeDeveloped/Wilderness
 author: Zadezter
 
 commands:
     wild:
-      description: Teleport to the random of wild zone!
+      description: Teleport to the random spot of wilderness!
       permission: wild.command
          
 permissions:
